@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, ScrollView, TouchableOpacity } from 'react-native';
 
+import NavigationBar from './components/navigationBar';
+import { black } from 'ansi-colors';
+
 export default class App extends React.Component {
 
   constructor(props) {
@@ -26,63 +29,28 @@ export default class App extends React.Component {
 
   render() {
     return (
-     <View style = {styles.mainContainer}>
-        <View style = {{height: 21, backgroundColor: this.state.bottomView }}>
-        </View>
-        <TouchableOpacity onPress={this.onTap } style = {{alignItems: 'center', justifyContent: 'center',flex: 0.5, backgroundColor: this.state.bottomView2}}>
-          <Text style = {{fontFamily: 'Avenir', fontSize: 25, color: this.state.bottomView}}>Click to reverse the colors!!</Text>
+     <View style = {{flex: 1}}>
+        <View style = {{height: 21, backgroundColor: '#D5F5E3' }}> </View>
+        
+        <NavigationBar />
+        
+        <TouchableOpacity onPress={this.onTap } style = {{alignItems: 'center', justifyContent: 'center',flex: 0.5, backgroundColor: this.state.bottomView2, borderBottomColor: '#ABB2B9',borderBottomWidth: 2.5}}>
+          <Text style = {{fontFamily: 'Avenir', fontSize: 27, color: this.state.bottomView, textAlign: 'center'}}>Click here to reverse the colors!!</Text>
         </TouchableOpacity>
-        <View style = {{alignItems: 'center', justifyContent: 'center',flex: 0.3, backgroundColor: this.state.bottomView}}>
-          <Text style = {{fontFamily: 'Avenir', fontSize: 25, color: this.state.bottomView2}}>Sample Text</Text>
+        
+        <View style = {{alignItems: 'center', justifyContent: 'center',flex: 0.3, backgroundColor: this.state.bottomView, borderBottomColor: '#ABB2B9',borderBottomWidth: 2.5}}>
+          <Text style = {{fontFamily: 'Avenir', fontSize: 27, color: this.state.bottomView2}}>Hakan</Text>
         </View>
-        <View style = {{alignItems: 'center', justifyContent: 'center',flex: 0.3, backgroundColor: this.state.bottomView2}}>
-          <Text style = {{fontFamily: 'Avenir', fontSize: 25, color: this.state.bottomView}}>Sample Text</Text>
+        
+        <View style = {{alignItems: 'center', justifyContent: 'center',flex: 0.3, backgroundColor: this.state.bottomView2, borderBottomColor: '#ABB2B9',borderBottomWidth: 2.5}}>
+          <Text style = {{fontFamily: 'Avenir', fontSize: 27, color: this.state.bottomView}}>Akın</Text>
         </View>
-        <View style = {{alignItems: 'center', justifyContent: 'center',flex: 0.3, backgroundColor: this.state.bottomView}}>
-          <Text style = {{fontFamily: 'Avenir', fontSize: 25, color: this.state.bottomView2}}>Sample Text</Text>
+        
+        <View style = {{alignItems: 'center', justifyContent: 'center',flex: 0.3, backgroundColor: this.state.bottomView, borderBottomColor: '#ABB2B9',borderBottomWidth: 2.5}}>
+          <Text style = {{fontFamily: 'Avenir', fontSize: 27, color: this.state.bottomView2}}>React Native</Text>
         </View>
+
      </View>
     );
   }
 }
-
-const styles = StyleSheet.create({
-mainContainer: {
-  flex: 1,
-  backgroundColor: '#AED6F1',
-},
-insideContainer1:{
-  flex:0.4,
-  backgroundColor:'white',
-  alignItems:'center',
-  justifyContent:'center',
-},
-insideContainer2:{
-  flex:0.4,
-  backgroundColor:'#AED6F1',
-  alignItems:'center',
-  justifyContent:'center',
-},
-insideContainer3:{
-  flex:0.2,
-  backgroundColor:'white',
-  alignItems:'center',
-  justifyContent:'center',
-},
-insideContainer4:{
-  flex:0.2,
-  backgroundColor: '#AED6F1',
-  alignItems:'center',
-  justifyContent:'center',
-},
-mainText: {
-  fontFamily: 'Avenir',
-  color: '#AED6F1',
-  fontSize: 25,
-},
-mainText2: {
-  fontFamily: 'Avenir',
-  color: 'white',
-  fontSize: 25,
-},
-});
