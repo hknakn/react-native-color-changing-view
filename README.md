@@ -1,5 +1,5 @@
-# React-Native-Deneme-App
-React Native öğrenmek için yaptığım tıklanınca renk değiştiren view uygulaması
+# React Native Sample App
+This is a view color changing application that I made when I was studying on React Native.
 
-# Önizleme
+# Preview
 ![](appGif.gif)
